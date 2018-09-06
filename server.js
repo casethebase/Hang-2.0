@@ -21,7 +21,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // DB connection
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/buddha_users");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/hang");
 
 
 // Middleware
