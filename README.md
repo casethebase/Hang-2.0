@@ -1,4 +1,4 @@
-# HANG
+# HANG 2.0
 
 ## Contributors
 
