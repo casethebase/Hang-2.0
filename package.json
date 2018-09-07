@@ -1,5 +1,5 @@
 {
-  "name": "mern",
+  "name": "hang",
   "version": "1.0.0",
   "description": "Mern Demo",
   "main": "server.js",
@@ -9,12 +9,6 @@
     "client": "cd client && yarn start",
     "dev": "concurrently \"yarn run server\" \"yarn run client\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "concurrently": "^3.5.0",
-    "nodemon": "^1.11.0"
   },
   "dependencies": {
     "bcrypt": "^2.0.0",

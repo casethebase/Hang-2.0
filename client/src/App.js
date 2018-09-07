@@ -5,14 +5,14 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 import Navbar from './components/Navbar';
 
-import { withUser, update } from './services/withUser';
+import { withUser, update } from './services/withUsers';
 
 import CreateAccountPage from './pages/CreateAccountPage';
 import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
 import NotFoundPage from './pages/NotFoundPage';
 
-import './App.scss';
+// import './App.scss';
 
 class App extends Component {
   componentDidMount() {

@@ -4,7 +4,7 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
 import { Link } from 'react-router-dom';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
-import { update } from '../services/withUser';
+import { update } from '../services/withUsers';
 
 class LoginPage extends Component {
   state = {
