@@ -1,40 +1,45 @@
 // Dependencies
-const mongoose = require('mongoose');
 const express = require('express');
 const bodyParser = require('body-parser');
-const session = require("express-session");
-const passport = require("./config/passport");
+const morgan = require('morgan');
 
-
-
-// Express and port set up
-const app = express();
+// Define PORT and express init
 const PORT = process.env.PORT || 8080;
+const app = express();
 
-// Middleware set up
+// Middleware config
+//===================================================
+// Log requests to console to check for status codes
+app.use(morgan('dev'));
+
+// Body-parser set up
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-// Serve static assets
+// Serve static files
 if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
 }
 
-// DB connection
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/hang");
+// Passport configuration (This must be before we require our routes)
+require('./passport')(app);
 
+// Require in our routes
+app.use(require('./server/routes'));
 
-// Middleware
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
-app.use(express.static("public"));
+// Error message for handling middleware
+app.use((error, req, res, next) => {
+    console.error(error);
+    res.json({
+        error
+    })
+});
 
-// We need to use sessions to keep track of our user's login status
-app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
-app.use(passport.initialize());
-app.use(passport.session());
-
-app.listen(PORT, () => {
-    console.log(`Server listening on port:${PORT}`)
-})
-var passport = require("./config/passport");
+require('./middleware/mongoose')()
+    .then(() => {
+        app.listen(PORT, () => console.log(`Server listening on ${PORT}`));
+    })
+    .catch(err => {
+        console.error('Unable to connect to MongoDB')
+        console.error(err);
+    });

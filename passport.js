@@ -3,7 +3,7 @@ const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
-const db = require('./models');
+const db = require('./server/models');
 
 module.exports = (app) => {
     // Set up middlewares to make passport work with sessions
