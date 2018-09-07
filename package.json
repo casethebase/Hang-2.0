@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Mern Demo",
   "main": "server.js",
+  "license": "MIT",
   "scripts": {
     "start": "node server.js",
     "server": "nodemon server.js",
@@ -11,7 +12,7 @@
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "dependencies": {
-    "bcrypt": "^2.0.0",
+    "bcrypt": "^3.0.0",
     "body-parser": "^1.18.2",
     "cookie-parser": "^1.4.3",
     "express": "^4.16.3",
@@ -20,5 +21,15 @@
     "morgan": "^1.9.0",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/casethebase/hang2.0.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/casethebase/hang2.0/issues"
+  },
+  "homepage": "https://github.com/casethebase/hang2.0#readme"
 }

@@ -30,7 +30,7 @@ const Navbar = (props) => {
       style={{ backgroundColor: 'black' }}
       title={
       <div className="text-effect">
-        <div className="navTitle" data-text="Electric Buddha">Electric Buddha</div>
+        <div className="navTitle" data-text="Electric Buddha">Hang</div>
         <div className="gradient"></div>
         <div className="spotlight"></div>
       </div>
