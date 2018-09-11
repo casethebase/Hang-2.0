@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import {withStyles} from 'material-ui/styles'
 import Card, {CardContent, CardMedia} from 'material-ui/Card'
 import Typography from 'material-ui/Typography'
-import seashellImg from './../assets/images/logo-small.png'
+import hanglogo from './../assets/images/logo-small.png'
 import {Link} from 'react-router-dom'
 import Grid from 'material-ui/Grid'
 import auth from './../auth/auth-helper'
@@ -57,7 +57,7 @@ class Home extends Component {
                 <Typography type="headline" component="h2" className={classes.title}>
                   Home
                 </Typography>
-                <CardMedia className={classes.media} image={logo-small.png} title="logo-small.png"/>
+                <CardMedia className={classes.media} image={hanglogo} title="logo-small.png"/>
                 <CardContent>
                   <Typography type="body1" component="p">
                     Welcome to HANG 2.0. 
