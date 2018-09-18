@@ -18,9 +18,9 @@
   "homepage": "https://github.com/casethebase/hang2.0.git",
   "main": "./dist/server.generated.js",
   "scripts": {
-    "start": "nodemon ./client/App.js",
-    "build": "webpack --config webpack.config.client.production.js && webpack --mode=production --config webpack.config.server.js"
-    
+    "development": "nodemon",
+    "build": "webpack --config webpack.config.client.production.js && webpack --mode=production --config webpack.config.server.js",
+    "start": "NODE_ENV=production node ./dist/server.generated.js"
   },
   "engines": {
     "node": "8.11.1",
