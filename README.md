@@ -11,6 +11,6 @@
 ## Requirements and rough outline
 
 
-# Additional Features planned for future development:
+## Additional Features planned for future development:
 
 
