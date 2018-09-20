@@ -22,7 +22,10 @@ const config = {
                 test: /\.jsx?$/,
                 exclude: /node_modules/,
                 use: [
-                    'babel-loader'
+                    "babel-loader",
+                    "env",
+                    "stage-2",
+                    "react"
                 ]
             },
             {
